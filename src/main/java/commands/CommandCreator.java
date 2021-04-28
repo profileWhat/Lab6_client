@@ -4,17 +4,32 @@ import clientManagementModule.IncorrectCommandArgumentException;
 import clientManagementModule.InputDeviceWorker;
 import collectionManagementModule.CoupleIdRoute;
 
+/**
+ * Class for create received command using classes factory. That commands will be send to server. Class with pattern singleton and fabric method
+ */
 public class CommandCreator {
-
     private static CommandCreator commandCreator;
 
+    /**
+     * Private constructor so that you can't create from outside
+     */
     private CommandCreator() { }
 
+    /**
+     * Static method for return the only one object of CommandCreator
+     * @return Command creator object
+     */
     public static CommandCreator getCommandCreator() {
         if (commandCreator == null) commandCreator = new CommandCreator();
         return commandCreator;
     }
 
+    /**
+     * Method for create command using command factory.
+     * @param name to set command type
+     * @param argument to set command argument
+     * @return received command that was created only by factory
+     */
     public ReceivedCommand createCommand(String name, String argument) {
             CommandName commandName;
             try {

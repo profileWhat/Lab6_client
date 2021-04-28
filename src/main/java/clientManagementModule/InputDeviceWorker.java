@@ -113,7 +113,7 @@ public class InputDeviceWorker {
     }
 
     /**
-     * Method for read words of command to Array Deque and then enable them for Command Handler
+     * Method for read words, send them to server and write a received message from server
      */
     public void readCommands(ClientWorker clientWorker, InputStream in) throws WrongCommandException, IncorrectCommandArgumentException{
         Scanner reader = new Scanner(in);

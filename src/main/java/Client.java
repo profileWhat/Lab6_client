@@ -8,10 +8,15 @@ import java.net.SocketAddress;
 import java.nio.channels.SocketChannel;
 
 /**
- * Main class that runs the program
+ * Main class that runs the client
  */
 public class Client {
    private static SocketAddress socketAddr = new InetSocketAddress("localhost", 1221);
+
+    /**
+     * Method for run work of client
+     * @param args to set it
+     */
     static public void main(String[] args) {
         try {
             SocketChannel clientSocketChannel = SocketChannel.open(socketAddr);

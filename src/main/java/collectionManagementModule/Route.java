@@ -39,7 +39,7 @@ public class Route implements Serializable {
     }
 
     /**
-     * Method for set creation Date
+     * Method for set creation Date, useless in client, but that method use on server
      */
     public void setCreationDate() {
         this.creationDate = new java.util.Date();
@@ -55,7 +55,7 @@ public class Route implements Serializable {
     }
 
     /**
-     * Method for set Id
+     * Method for set Id, useless in client, but that method use on server
      *
      * @param id to load it
      */

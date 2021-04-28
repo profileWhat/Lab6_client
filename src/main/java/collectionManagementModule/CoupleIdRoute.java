@@ -10,7 +10,7 @@ public class CoupleIdRoute implements Serializable {
     private final Route route;
 
     /**
-     * Construcor for load id and route
+     * Constructor for load id and route
      *
      * @param id    to load to couple
      * @param route to load to route
@@ -21,8 +21,7 @@ public class CoupleIdRoute implements Serializable {
     }
 
     /**
-     * Method for get Id
-     *
+     * Method for get Id, useless in client, but that method use on server
      * @return Id
      */
     public Long getId() {
@@ -30,8 +29,7 @@ public class CoupleIdRoute implements Serializable {
     }
 
     /**
-     * Method for get Route
-     *
+     * Method for get Route, useless in client, but that method use on server
      * @return Route
      */
     public Route getRoute() {

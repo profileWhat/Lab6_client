@@ -12,13 +12,26 @@ import java.nio.ByteBuffer;
  */
 public class ClientWorker {
     private final Socket client;
+
+    /**
+     * Constructor for set socket client
+     * @param client for set it
+     */
     public ClientWorker(Socket client) {
         this.client = client;
     }
+
+    /**
+     * Method for start execution of client
+     */
     public void start() {
         InputDeviceWorker.getInputDevice().readCommands(this, System.in);
     }
 
+    /**
+     * Method for send command to server
+     * @param receivedCommand to sent it to server
+     */
     public void sendCommand(ReceivedCommand receivedCommand) {
         try {
             try(ByteArrayOutputStream byteArrayOStream = new ByteArrayOutputStream()) {
@@ -33,6 +46,10 @@ public class ClientWorker {
         }
     }
 
+    /**
+     * Method for get message from server
+     * @return message in String format from server
+     */
     public String getMessage() {
         boolean EndScriptExFlag = false;
         StringBuilder message = new StringBuilder();
