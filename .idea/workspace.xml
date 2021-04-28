@@ -7,30 +7,7 @@
     <list default="true" id="ec1f8a76-13a8-427a-9859-642c8b551e38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/ClientWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/ClientWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/InputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/InputDeviceWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/OutputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/OutputDeviceWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/CoupleIdRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collectionManagementModule/CoupleIdRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collectionManagementModule/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountGreaterThanDistanceCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountGreaterThanDistanceCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelpCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/HelpCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PrintFieldAscendingDistanceCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/PrintFieldAscendingDistanceCommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/ReceivedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ReceivedCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByDistanceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByDistanceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveByIdCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveByIdCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveFirstCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveFirstCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateCommandFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,24 +43,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab6_server" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
-      <module name="client" />
+      <module name="lab6_client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,18 +100,37 @@
       <workItem from="1619614826480" duration="18351000" />
       <workItem from="1619638315085" duration="680000" />
       <workItem from="1619639010926" duration="12000" />
-      <workItem from="1619640404066" duration="2296000" />
+      <workItem from="1619640404066" duration="4027000" />
+      <workItem from="1619645856971" duration="37000" />
+      <workItem from="1619645918378" duration="1735000" />
+      <workItem from="1619648116133" duration="1842000" />
     </task>
+    <task id="LOCAL-00001" summary="added javadoc documentation, deleted unused fields">
+      <created>1619642795431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619642795431</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added javadoc documentation, deleted unused fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="added javadoc documentation, deleted unused fields" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1619634845154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1619634845154" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619647161750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1619647161750" />
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1619539422763">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -144,10 +143,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619107680684" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1619639021316">
+    <state x="379" y="0" key="CommitChangelistDialog2" timestamp="1619642794473">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619639021316" />
+    <state x="379" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1619642794473" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1619648141405">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619648141405" />
     <state x="647" y="310" key="Github.ShareDialog" timestamp="1619638387846">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -156,22 +159,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619638408062" />
-    <state width="1493" height="166" key="GridCell.Tab.0.bottom" timestamp="1619638999031">
+    <state width="1493" height="166" key="GridCell.Tab.0.bottom" timestamp="1619649964075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619638999031" />
-    <state width="1493" height="166" key="GridCell.Tab.0.center" timestamp="1619638999031">
+    <state width="1493" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619649964075" />
+    <state width="1493" height="166" key="GridCell.Tab.0.center" timestamp="1619649964074">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619638999031" />
-    <state width="1493" height="166" key="GridCell.Tab.0.left" timestamp="1619638999031">
+    <state width="1493" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619649964074" />
+    <state width="1493" height="166" key="GridCell.Tab.0.left" timestamp="1619649964074">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619638999031" />
-    <state width="1493" height="166" key="GridCell.Tab.0.right" timestamp="1619638999031">
+    <state width="1493" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619649964074" />
+    <state width="1493" height="166" key="GridCell.Tab.0.right" timestamp="1619649964075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619638999031" />
+    <state width="1493" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619649964075" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1619638259533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -192,6 +195,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1619638251760" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1619642798011">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1619642798011" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619646236180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1619646236180" />
     <state x="562" y="160" key="refactoring.ChangeSignatureDialog" timestamp="1618752203954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

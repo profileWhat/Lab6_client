@@ -3,7 +3,7 @@ package commands;
 import java.io.Serializable;
 
 /**
- * Class received command that will be send of server. That class you can get only with command factory
+ * Class of the command received from the client
  */
 public class ReceivedCommand implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -11,18 +11,18 @@ public class ReceivedCommand implements Serializable {
     private final Object argument;
 
     /**
-     * Constructor for set command type and argument
-     * @param commandsName to set it
-     * @param argument to set it
+     * Constructor for set commandName and argument of command
+     * @param commandName to set in object
+     * @param argument to set in object
      */
-    protected ReceivedCommand(CommandName commandsName, Object argument) {
-        this.commandsName = commandsName;
+    protected ReceivedCommand(CommandName commandName, Object argument) {
+        this.commandsName = commandName;
         this.argument = argument;
     }
 
     /**
-     * Method for get argument, this method useless on client, but it uses on server
-     * @return argument
+     * Method for get argument of command
+     * @return argument of command
      */
     public Object getArgument() {
         return argument;
@@ -32,7 +32,7 @@ public class ReceivedCommand implements Serializable {
      * Method for get command name, this method useless on client, but it uses on server
      * @return command name
      */
-    public CommandName getCommandsName() {
+    public CommandName getCommandName() {
         return commandsName;
     }
 

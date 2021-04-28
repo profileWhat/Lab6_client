@@ -1,5 +1,6 @@
 
 import clientManagementModule.ClientWorker;
+import clientManagementModule.InputDeviceWorker;
 import clientManagementModule.OutputDeviceWorker;
 
 import java.io.IOException;
@@ -11,13 +12,14 @@ import java.nio.channels.SocketChannel;
  * Main class that runs the client
  */
 public class Client {
-   private static SocketAddress socketAddr = new InetSocketAddress("localhost", 1221);
-
     /**
      * Method for run work of client
      * @param args to set it
      */
     static public void main(String[] args) {
+        OutputDeviceWorker.getDescriber().describeString("Enter the server port: ");
+        int port = InputDeviceWorker.getInputDevice().waitCorrectIntegerValue();
+        SocketAddress socketAddr = new InetSocketAddress("localhost", port);
         try {
             SocketChannel clientSocketChannel = SocketChannel.open(socketAddr);
             OutputDeviceWorker.getDescriber().describeString("Connection established");
