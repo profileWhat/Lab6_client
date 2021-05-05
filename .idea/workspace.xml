@@ -6,8 +6,38 @@
   <component name="ChangeListManager">
     <list default="true" id="ec1f8a76-13a8-427a-9859-642c8b551e38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ReceivedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ReceivedCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/ClientWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/ClientWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/InputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IO_utility/InputDeviceWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/OutputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IO_utility/OutputDeviceWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/WrongCommandException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/CoupleIdRoute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/LocationFrom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/LocationTo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/Route.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/CommandCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountGreaterThanDistanceCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelpCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PrintFieldAscendingDistanceCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ReceivedCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByDistanceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveByIdCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveFirstCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateCommandFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InputFile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Script1.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +73,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab6_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lab6 (3)/lab6/lab6_client" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ИТМО\Программирование\lab6\lab6_client\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -103,7 +138,14 @@
       <workItem from="1619640404066" duration="4027000" />
       <workItem from="1619645856971" duration="37000" />
       <workItem from="1619645918378" duration="1735000" />
-      <workItem from="1619648116133" duration="1842000" />
+      <workItem from="1619648116133" duration="1916000" />
+      <workItem from="1619675173257" duration="10184000" />
+      <workItem from="1619865499622" duration="144000" />
+      <workItem from="1619865655962" duration="72000" />
+      <workItem from="1619865775362" duration="2560000" />
+      <workItem from="1620150143746" duration="252000" />
+      <workItem from="1620196758409" duration="4036000" />
+      <workItem from="1620226919311" duration="10844000" />
     </task>
     <task id="LOCAL-00001" summary="added javadoc documentation, deleted unused fields">
       <created>1619642795431</created>
@@ -112,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619642795431</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added server port input">
+      <created>1619650038942</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619650038942</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,13 +169,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added javadoc documentation, deleted unused fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="added javadoc documentation, deleted unused fields" />
+    <MESSAGE value="added server port input" />
+    <option name="LAST_COMMIT_MESSAGE" value="added server port input" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="91" key="#Inspections" timestamp="1619634845154">
+    <state x="395" y="91" key="#Inspections" timestamp="1620242509863">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1619634845154" />
+    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1620242509863" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619647161750">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -139,18 +189,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="492" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1619167901074" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619107680684">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619867922017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619107680684" />
-    <state x="379" y="0" key="CommitChangelistDialog2" timestamp="1619642794473">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619867922017" />
+    <state x="379" y="0" key="CommitChangelistDialog2" timestamp="1619650038251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="379" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1619642794473" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1619648141405">
+    <state x="379" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1619650038251" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620227104453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619648141405" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620227104453" />
     <state x="647" y="310" key="Github.ShareDialog" timestamp="1619638387846">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -159,50 +209,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619638408062" />
-    <state width="1493" height="166" key="GridCell.Tab.0.bottom" timestamp="1619649964075">
+    <state width="1493" height="166" key="GridCell.Tab.0.bottom" timestamp="1620242502947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619649964075" />
-    <state width="1493" height="166" key="GridCell.Tab.0.center" timestamp="1619649964074">
+    <state width="1493" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
+    <state width="1493" height="166" key="GridCell.Tab.0.center" timestamp="1620242502947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1619649964074" />
-    <state width="1493" height="166" key="GridCell.Tab.0.left" timestamp="1619649964074">
+    <state width="1493" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
+    <state width="1493" height="166" key="GridCell.Tab.0.left" timestamp="1620242502947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1619649964074" />
-    <state width="1493" height="166" key="GridCell.Tab.0.right" timestamp="1619649964075">
+    <state width="1493" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
+    <state width="1493" height="166" key="GridCell.Tab.0.right" timestamp="1620242502947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1619649964075" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1619638259533">
+    <state width="1493" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1620241101274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1619638259533" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1619638259532">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620241101274" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1620241101273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1619638259532" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1619638259532">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620241101273" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1620241101273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1619638259532" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1619638259532">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620241101273" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1620241101273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1619638259532" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620241101273" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1619638251760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1619638251760" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1619642798011">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1619650040356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1619642798011" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1619650040356" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619646236180">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1619646236180" />
+    <state x="209" y="73" key="new project wizard" timestamp="1619866045595">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1619866045595" />
     <state x="562" y="160" key="refactoring.ChangeSignatureDialog" timestamp="1618752203954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -211,9 +265,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1619110577459" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1619170808136">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620238307368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1619170808136" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620238307368" />
   </component>
 </project>

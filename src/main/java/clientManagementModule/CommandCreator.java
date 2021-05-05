@@ -1,8 +1,8 @@
-package commands;
+package clientManagementModule;
 
-import clientManagementModule.IncorrectCommandArgumentException;
-import clientManagementModule.InputDeviceWorker;
+import IO_utility.InputDeviceWorker;
 import collectionManagementModule.CoupleIdRoute;
+import commands.*;
 
 /**
  * Class for create received command using classes factory. That commands will be send to server. Class with pattern singleton and fabric method
@@ -30,12 +30,12 @@ public class CommandCreator {
      * @param argument to set command argument
      * @return received command that was created only by factory
      */
-    public ReceivedCommand createCommand(String name, String argument) {
-            CommandName commandName;
+    public ClientCommand createCommand(String name, String argument) throws IncorrectCommandArgumentException {
+            ClientCommandName commandName;
             try {
-                commandName = CommandName.valueOf(name.toUpperCase());
+                commandName = ClientCommandName.valueOf(name.toUpperCase());
             } catch (IllegalArgumentException | NullPointerException e) {
-                commandName = CommandName.UNDEFINED;
+                commandName = ClientCommandName.UNDEFINED;
             }
             switch (commandName) {
                 case ADD:
@@ -96,7 +96,7 @@ public class CommandCreator {
                     }
                     return new UpdateCommandFactory(new CoupleIdRoute(id, InputDeviceWorker.getInputDevice().inputRoute())).createCommand();
                 }
-                default: return new ReceivedCommand(CommandName.UNDEFINED, null);
+                default: return new UndefinedCommandFactory().createCommand();
             }
 
     }

@@ -1,7 +1,7 @@
 
 import clientManagementModule.ClientWorker;
-import clientManagementModule.InputDeviceWorker;
-import clientManagementModule.OutputDeviceWorker;
+import IO_utility.InputDeviceWorker;
+import IO_utility.OutputDeviceWorker;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -23,7 +23,7 @@ public class Client {
         try {
             SocketChannel clientSocketChannel = SocketChannel.open(socketAddr);
             OutputDeviceWorker.getDescriber().describeString("Connection established");
-            ClientWorker clientWorker = new ClientWorker(clientSocketChannel.socket());
+            ClientWorker clientWorker = new ClientWorker(clientSocketChannel);
             clientWorker.start();
         } catch (IOException e) {
             System.out.println("Connection cannot be established");

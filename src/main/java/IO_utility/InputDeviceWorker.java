@@ -1,11 +1,12 @@
-package clientManagementModule;
+package IO_utility;
 
+import clientManagementModule.*;
 import collectionManagementModule.Coordinates;
 import collectionManagementModule.LocationFrom;
 import collectionManagementModule.LocationTo;
 import collectionManagementModule.Route;
-import commands.CommandCreator;
-import commands.ReceivedCommand;
+import commands.ClientCommand;
+import server_messages.ServerMessage;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -115,7 +116,7 @@ public class InputDeviceWorker {
     /**
      * Method for read words, send them to server and write a received message from server
      */
-    public void readCommands(ClientWorker clientWorker, InputStream in) throws WrongCommandException, IncorrectCommandArgumentException{
+    public void readCommands(ClientWorker clientWorker, InputStream in) throws IOException{
         Scanner reader = new Scanner(in);
         String regex = "(?:\\w[,./:]?)+";
         Pattern p = Pattern.compile(regex);
@@ -131,24 +132,27 @@ public class InputDeviceWorker {
             }
             commandName = lineWords.pollFirst();
             String commandArgument = lineWords.pollFirst();
-            ReceivedCommand receivedCommand = CommandCreator.getCommandCreator().createCommand(commandName, commandArgument);
-            clientWorker.sendCommand(receivedCommand);
-            String message = clientWorker.getMessage();
-            if (Objects.equals(message, "EndScriptExFlag")) {
-                OutputDeviceWorker.getDescriber().describeString("abort execution \n");
-                break;
-            }
-            System.out.println(message);
-            if (Objects.equals(commandName, "exit")) break;
             try {
-                if (Objects.equals(commandName, "execute_script"))
-                    if (commandArgument != null) {
-                        readCommands(clientWorker, new FileInputStream(commandArgument));
-                    }
-            } catch (IOException e) {
-                OutputDeviceWorker.getDescriber().describeString("the path to execute the script was not found");
+                ClientCommand receivedCommand = CommandCreator.getCommandCreator().createCommand(commandName, commandArgument);
+                clientWorker.sendCommand(receivedCommand);
+                ServerMessage serverMessage = clientWorker.getMessage();
+                String message = serverMessage.getMessage();
+                System.out.println(message);
+                if (serverMessage.isEndOfScriptExFlag()) {
+                    break;
+                }
+                if (Objects.equals(commandName, "exit")) break;
+                try {
+                    if (Objects.equals(commandName, "execute_script"))
+                        if (commandArgument != null) {
+                            readCommands(clientWorker, new FileInputStream(commandArgument));
+                        }
+                } catch (IOException e) {
+                    OutputDeviceWorker.getDescriber().describeString("the path to execute the script was not found");
+                }
+            } catch (IncorrectCommandArgumentException e) {
+                OutputDeviceWorker.getDescriber().describeException(e);
             }
-
         }
     }
 
