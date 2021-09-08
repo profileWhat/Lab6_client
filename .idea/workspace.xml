@@ -5,39 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec1f8a76-13a8-427a-9859-642c8b551e38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IO_utility/InputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IO_utility/InputDeviceWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/ClientWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/ClientWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/InputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IO_utility/InputDeviceWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/OutputDeviceWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IO_utility/OutputDeviceWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/WrongCommandException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/Coordinates.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/CoupleIdRoute.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/LocationFrom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/LocationTo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collectionManagementModule/Route.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/CommandCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountGreaterThanDistanceCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelpCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PrintFieldAscendingDistanceCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ReceivedCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByDistanceFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveByIdCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveFirstCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateCommandFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InputFile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Script1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clientManagementModule/CommandCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clientManagementModule/CommandCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +46,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lab6 (3)/lab6/lab6_client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -90,15 +66,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,7 +119,19 @@
       <workItem from="1619865775362" duration="2560000" />
       <workItem from="1620150143746" duration="252000" />
       <workItem from="1620196758409" duration="4036000" />
-      <workItem from="1620226919311" duration="10844000" />
+      <workItem from="1620226919311" duration="13323000" />
+      <workItem from="1620279446143" duration="3538000" />
+      <workItem from="1620284462284" duration="479000" />
+      <workItem from="1620836186710" duration="1201000" />
+      <workItem from="1620837551698" duration="131000" />
+      <workItem from="1620838007192" duration="2100000" />
+      <workItem from="1620841970102" duration="64000" />
+      <workItem from="1620847336446" duration="31000" />
+      <workItem from="1620888401814" duration="4258000" />
+      <workItem from="1622977593967" duration="119000" />
+      <workItem from="1631131689670" duration="134000" />
+      <workItem from="1631132043731" duration="59000" />
+      <workItem from="1631132232114" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="added javadoc documentation, deleted unused fields">
       <created>1619642795431</created>
@@ -161,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619650038942</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed the common code from the client and connected it as a library, and also changed all Socket to SocketChannel for more convenient operation">
+      <created>1620242713804</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620242713804</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,104 +163,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added javadoc documentation, deleted unused fields" />
     <MESSAGE value="added server port input" />
-    <option name="LAST_COMMIT_MESSAGE" value="added server port input" />
+    <MESSAGE value="removed the common code from the client and connected it as a library, and also changed all Socket to SocketChannel for more convenient operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed the common code from the client and connected it as a library, and also changed all Socket to SocketChannel for more convenient operation" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="395" y="91" key="#Inspections" timestamp="1620242509863">
+    <state width="1493" height="166" key="GridCell.Tab.0.bottom" timestamp="1631133471542">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1620242509863" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619647161750">
+    <state width="1493" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1631133471542" />
+    <state width="1493" height="166" key="GridCell.Tab.0.center" timestamp="1631133471541">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1619647161750" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1619539422763">
+    <state width="1493" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1631133471541" />
+    <state width="1493" height="166" key="GridCell.Tab.0.left" timestamp="1631133471541">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1619539422763" />
-    <state x="492" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619167901074">
+    <state width="1493" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1631133471541" />
+    <state width="1493" height="166" key="GridCell.Tab.0.right" timestamp="1631133471542">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="492" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1619167901074" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619867922017">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619867922017" />
-    <state x="379" y="0" key="CommitChangelistDialog2" timestamp="1619650038251">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="379" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1619650038251" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620227104453">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620227104453" />
-    <state x="647" y="310" key="Github.ShareDialog" timestamp="1619638387846">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1619638387846" />
-    <state x="527" y="117" key="Github.UntrackedFilesDialog" timestamp="1619638408062">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1619638408062" />
-    <state width="1493" height="166" key="GridCell.Tab.0.bottom" timestamp="1620242502947">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
-    <state width="1493" height="166" key="GridCell.Tab.0.center" timestamp="1620242502947">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
-    <state width="1493" height="166" key="GridCell.Tab.0.left" timestamp="1620242502947">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
-    <state width="1493" height="166" key="GridCell.Tab.0.right" timestamp="1620242502947">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620242502947" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1620241101274">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620241101274" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1620241101273">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620241101273" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1620241101273">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620241101273" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1620241101273">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620241101273" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1619638251760">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1619638251760" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1619650040356">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1619650040356" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619646236180">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1619646236180" />
-    <state x="209" y="73" key="new project wizard" timestamp="1619866045595">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1619866045595" />
-    <state x="562" y="160" key="refactoring.ChangeSignatureDialog" timestamp="1618752203954">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="562" y="160" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1618752203954" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1619110577459">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1619110577459" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1620238307368">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1620238307368" />
+    <state width="1493" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1631133471542" />
   </component>
 </project>

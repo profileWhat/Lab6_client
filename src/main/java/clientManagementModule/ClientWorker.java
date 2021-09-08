@@ -2,10 +2,13 @@ package clientManagementModule;
 
 import IO_utility.InputDeviceWorker;
 import IO_utility.OutputDeviceWorker;
+import client_messages.ClientCommandMessage;
+import client_messages.ClientStringMessage;
 import commands.ClientCommand;
 import server_messages.ServerMessage;
 
 import java.io.*;
+import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
@@ -14,14 +17,16 @@ import java.nio.channels.SocketChannel;
  * Class of working with the client
  */
 public class ClientWorker {
-    private final SocketChannel clientChannel;
-
+    private SocketChannel clientChannel;
+    private boolean serverAvailable;
+    private final SocketAddress socketAddr;
+    private String userName;
     /**
      * Constructor for set socket client
-     * @param clientChannel for set it
+     * @param socketAddr for set it
      */
-    public ClientWorker(SocketChannel clientChannel) {
-        this.clientChannel = clientChannel;
+    public ClientWorker(SocketAddress socketAddr) {
+        this.socketAddr = socketAddr;
     }
 
     /**
@@ -29,9 +34,19 @@ public class ClientWorker {
      */
     public void start() {
         try {
-            InputDeviceWorker.getInputDevice().readCommands(this, System.in);
-        } catch (IOException e) {
-            OutputDeviceWorker.getDescriber().describeString("The server crashed, the connection is broken");
+            this.clientChannel = SocketChannel.open(socketAddr);
+            OutputDeviceWorker.getDescriber().describeString("Connection established");
+            serverAvailable = true;
+            if (InputDeviceWorker.getInputDevice().loginToServer(this, System.in)) {
+                InputDeviceWorker.getInputDevice().readCommands(this);
+            }
+            if (!serverAvailable) {
+                OutputDeviceWorker.getDescriber().describeString("Server crashed, if you want to reconnect, enter yes");
+                if (InputDeviceWorker.getInputDevice().InputYes()) start();
+            }
+        } catch (IOException|NullPointerException e) {
+            OutputDeviceWorker.getDescriber().describeString("Server crashed, if you want to reconnect, enter yes");
+            if (InputDeviceWorker.getInputDevice().InputYes()) start();
         }
     }
 
@@ -44,7 +59,7 @@ public class ClientWorker {
         try {
             try(ByteArrayOutputStream byteArrayOStream = new ByteArrayOutputStream()) {
                 try (ObjectOutputStream out = new ObjectOutputStream(byteArrayOStream)) {
-                    out.writeObject(receivedCommand);
+                    out.writeObject(new ClientCommandMessage(receivedCommand,userName));
                     buffer = ByteBuffer.wrap(byteArrayOStream.toByteArray());
                 }
             }
@@ -54,13 +69,27 @@ public class ClientWorker {
         clientChannel.write(buffer);
     }
 
+    public void sendString(String string) throws IOException {
+        ByteBuffer buffer = null;
+        try {
+            try(ByteArrayOutputStream byteArrayOStream = new ByteArrayOutputStream()) {
+                try (ObjectOutputStream out = new ObjectOutputStream(byteArrayOStream)) {
+                    out.writeObject(new ClientStringMessage(string));
+                    buffer = ByteBuffer.wrap(byteArrayOStream.toByteArray());
+                }
+            }
+        } catch (IOException e) {
+            OutputDeviceWorker.getDescriber().describeString("Error sending the message");
+        }
+        clientChannel.write(buffer);
+    }
     /**
      * Method for get message from server
      * @return message in String format from server
      */
     public ServerMessage getMessage() {
         ServerMessage serverMessage = null;
-        byte[] bytes = new byte[32767];
+        byte[] bytes = new byte[65567];
         try {
             BufferedInputStream bInputStream = new BufferedInputStream(clientChannel.socket().getInputStream());
             ByteBuffer buffer = ByteBuffer.wrap(bytes);
@@ -77,4 +106,11 @@ public class ClientWorker {
         return serverMessage;
     }
 
+    public void setNotServerAvailable() {
+        this.serverAvailable = false;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }

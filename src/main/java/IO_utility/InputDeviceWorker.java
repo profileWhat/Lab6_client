@@ -1,10 +1,10 @@
 package IO_utility;
 
 import clientManagementModule.*;
-import collectionManagementModule.Coordinates;
-import collectionManagementModule.LocationFrom;
-import collectionManagementModule.LocationTo;
-import collectionManagementModule.Route;
+import collection_management_module.Coordinates;
+import collection_management_module.LocationFrom;
+import collection_management_module.LocationTo;
+import collection_management_module.Route;
 import commands.ClientCommand;
 import server_messages.ServerMessage;
 
@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayDeque;
+import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -22,9 +23,10 @@ import java.util.regex.Pattern;
  * Class for working with the input device
  */
 public class InputDeviceWorker {
-    private final Scanner reader;
+    private Scanner reader;
     static private InputDeviceWorker inputDeviceWorker;
     private final CorrectValuePullout correctValuePullout;
+    private String userName;
 
     private InputDeviceWorker() {
         this.correctValuePullout = new CorrectValuePullout();
@@ -95,6 +97,18 @@ public class InputDeviceWorker {
         return (value);
     }
 
+    public String waitCorrectIPv4() {
+        String regex = "(((\\d{1,2})|(1\\d{2})|(2[0-4]\\d)|(25[0-5]))\\.){3}((\\d{1,2})|(1\\d{2})|(2[0-4]\\d)|(25[0-5]))";
+        Pattern p = Pattern.compile(regex);
+        String currentString = reader.nextLine();
+        Matcher matcher = p.matcher(currentString);
+        while (!matcher.find()) {
+            OutputDeviceWorker.getDescriber().describeString("Incorrect IPv4 address, please rewrite IPv4 Address");
+            currentString = reader.nextLine();
+            matcher = p.matcher(currentString);
+        }
+        return currentString.substring(matcher.start(), matcher.end());
+    }
     /**
      * Method for wait and return Float Value
      *
@@ -116,8 +130,7 @@ public class InputDeviceWorker {
     /**
      * Method for read words, send them to server and write a received message from server
      */
-    public void readCommands(ClientWorker clientWorker, InputStream in) throws IOException{
-        Scanner reader = new Scanner(in);
+    public void readCommands(ClientWorker clientWorker) throws IOException{
         String regex = "(?:\\w[,./:]?)+";
         Pattern p = Pattern.compile(regex);
         String currentString;
@@ -136,16 +149,23 @@ public class InputDeviceWorker {
                 ClientCommand receivedCommand = CommandCreator.getCommandCreator().createCommand(commandName, commandArgument);
                 clientWorker.sendCommand(receivedCommand);
                 ServerMessage serverMessage = clientWorker.getMessage();
+                if (serverMessage == null) {
+                    clientWorker.setNotServerAvailable();
+                    break;
+                }
                 String message = serverMessage.getMessage();
                 System.out.println(message);
-                if (serverMessage.isEndOfScriptExFlag()) {
+                if (serverMessage.isEndOfScriptExFlag() || serverMessage.isEndOfClientFlag()) {
                     break;
                 }
                 if (Objects.equals(commandName, "exit")) break;
                 try {
                     if (Objects.equals(commandName, "execute_script"))
                         if (commandArgument != null) {
-                            readCommands(clientWorker, new FileInputStream(commandArgument));
+                            FileInputStream fileInputStream = new FileInputStream(commandArgument);
+                            this.reader = new Scanner(fileInputStream);
+                            readCommands(clientWorker);
+                            this.reader = new Scanner(System.in);
                         }
                 } catch (IOException e) {
                     OutputDeviceWorker.getDescriber().describeString("the path to execute the script was not found");
@@ -156,6 +176,34 @@ public class InputDeviceWorker {
         }
     }
 
+    public boolean loginToServer(ClientWorker clientWorker, InputStream in) throws NullPointerException {
+        Scanner reader = new Scanner(in);
+        boolean isLoggedToServer = false;
+        while (true) {
+            ServerMessage serverMessage = clientWorker.getMessage();
+            OutputDeviceWorker.getDescriber().describeString(serverMessage.getMessage());
+            if (serverMessage.isLoggedUSer()) {
+                isLoggedToServer = true;
+                userName = serverMessage.getMessage();
+                clientWorker.setUserName(userName);
+                OutputDeviceWorker.getDescriber().describeString(clientWorker.getMessage().getMessage());
+                break;
+            }
+            if (serverMessage.isEndOfClientFlag()) {
+                break;
+            }
+            try {
+                clientWorker.sendString(reader.next());
+            } catch (IOException e) {
+                OutputDeviceWorker.getDescriber().describeString("Cant send string message");
+            }
+        }
+        return isLoggedToServer;
+    }
+    public boolean InputYes() {
+        String currentString = reader.nextLine();
+        return (currentString.equals("yes"));
+    }
     /**
      * Method for input Route
      *
@@ -189,7 +237,9 @@ public class InputDeviceWorker {
         OutputDeviceWorker.getDescriber().describeString("Enter the name of Location To: ");
         String nameLocationTo = reader.nextLine();
         LocationTo routeTo = new LocationTo(xToCoordinate, yToCoordinate, zToCoordinate, nameLocationTo);
-
-        return (new Route(routeName, routeCoordinates, routeFrom, routeTo));
+        Route route = new Route(routeName, routeCoordinates, routeFrom, routeTo);
+        route.setRouteCreator(userName);
+        route.setCreationDate(new Date());
+        return route;
     }
 }

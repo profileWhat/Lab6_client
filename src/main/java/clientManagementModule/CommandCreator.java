@@ -1,7 +1,7 @@
 package clientManagementModule;
 
 import IO_utility.InputDeviceWorker;
-import collectionManagementModule.CoupleIdRoute;
+import collection_management_module.CoupleIdRoute;
 import commands.*;
 
 /**
@@ -92,7 +92,7 @@ public class CommandCreator {
                     try {
                         id = Long.parseLong(argument);
                     } catch (NumberFormatException e) {
-                        throw new IncorrectCommandArgumentException("Incorrect double value");
+                        throw new IncorrectCommandArgumentException("Incorrect long value");
                     }
                     return new UpdateCommandFactory(new CoupleIdRoute(id, InputDeviceWorker.getInputDevice().inputRoute())).createCommand();
                 }
